@@ -1,0 +1,125 @@
+:javascript
+  $(document).ready(function() {
+    $('#fullpage').fullpage({
+      anchors: ['start', 'form', 'signers'],
+      sectionsColor: ['#FFFEFD', '##F7F7F9', '#FDFCFB'],
+      resize: true,
+      css3: true,
+      scrollOverflow: true,
+      navigation: true,
+      paddingBottom: '30px'
+    });
+  });
+
+#footer
+  &copy 2015, Friederike &amp; Nils L&ouml;we and many of the first signees.
+  This declaration may be freely copied in any form, but only in its entirety through this notice.
+
+  .pull-right
+    =link_to 'Tweet', 'https://twitter.com/share', class: "twitter-share-button", :data => { :url => "http://manifesto.responsiblesoftware.org", :text => 'Do you take responsibility for your work as a software developer?', :hashtags => "responsibility, manifesto" }
+    :javascript
+      window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));
+
+#fullpage
+  .section#section0
+
+    .manifesto-title
+      .row
+        .col-sm-offset-2.col-sm-8
+          %h1= I18n.t('manifesto.title')
+
+    .manifesto-head
+      .row
+        .col-sm-offset-2.col-sm-8
+          %h3= I18n.t('manifesto.headline.row1')
+          %h3= I18n.t('manifesto.headline.row2')
+          %h3= I18n.t('manifesto.headline.row3')
+
+    .manifesto-content
+      .row
+        .col-sm-offset-2.col-sm-8
+          %b= I18n.t('manifesto.content.sub1')
+          %p= I18n.t('manifesto.content.text1')
+
+      .row
+        .col-sm-offset-2.col-sm-8
+          %b= I18n.t('manifesto.content.sub2')
+          %p= I18n.t('manifesto.content.text2a')
+          %p= I18n.t('manifesto.content.text2b')
+
+      .row
+        .col-sm-offset-2.col-sm-8
+          %b= I18n.t('manifesto.content.sub3')
+          %p= I18n.t('manifesto.content.text3a')
+          %p= I18n.t('manifesto.content.text3b')
+
+      .row
+        .col-sm-offset-2.col-sm-8
+          %b= I18n.t('manifesto.content.sub4')
+          %p= I18n.t('manifesto.content.text4')
+
+      .row
+        .col-sm-offset-2.col-sm-8
+          %b= I18n.t('manifesto.content.sub5')
+          %p= I18n.t('manifesto.content.text5')
+
+      .row
+        .col-sm-offset-2.col-sm-8
+          %i= I18n.t('manifesto.footer')
+
+    .manifesto-link
+      .row
+        .col-sm-offset-4.col-sm-4
+          =link_to I18n.t('coder.create'), '#form', :class => "btn btn-success btn-sm btn-block"
+
+  .section#section1
+
+    .manifesto-short
+      .row
+        .col-md-offset-2.col-md-10
+          %h1= I18n.t('form.headline')
+
+      .row
+        .col-md-offset-2.col-md-8
+          %p= I18n.t('manifesto.content.sub1')
+          %p= I18n.t('manifesto.content.sub2')
+          %p= I18n.t('manifesto.content.sub3')
+          %p= I18n.t('manifesto.content.sub4')
+          %p= I18n.t('manifesto.content.sub5')
+          %p= I18n.t('manifesto.footer')
+
+    .manifesto-form
+      .row
+        .col-md-offset-2.col-md-8
+          = render 'coders/form'
+
+    .manifesto-privacy
+      .row
+        .col-md-offset-2.col-md-8
+          %b= I18n.t('form.privacy.header')
+          %p= I18n.t('form.privacy.text')
+
+    .manifesto-link
+      .row
+        .col-sm-offset-4.col-sm-4
+          =link_to I18n.t('manifesto.signers'), '#signers'
+
+  .section#section2
+
+    - if flash[:signed_up]
+      .manifesto-notice
+        .row
+          .col-md-offset-1.col-md-10
+            .alert.alert-success
+              %p= I18n.t('manifesto.signed')
+
+    .manifesto-title
+      .row
+        .col-md-offset-2.col-md-8
+          %h1= t('signers.headline')
+
+    .manifesto-signers
+      .row
+        .col-md-offset-1.col-md-10
+          .row
+            = render @coders

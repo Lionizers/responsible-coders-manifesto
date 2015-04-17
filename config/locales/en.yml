@@ -1,0 +1,60 @@
+en:
+  hello: "Hello world"
+  manifesto:
+    title: Manifesto for Responsible Software Development
+    headline:
+      row1: In order to foster a free and fair society I affirm that I will
+      row2: practice my profession with responsibly and with
+      row3: "dignity. I will abide by the following principles:"
+    content:
+      sub1:   I am ethically responsible for my decisions and I will act according to my conscience.
+      text1:  The impact of software is growing continuously in all areas of our lives. I acknowledge the
+              consequences to humanity and the environment that evolve from our work.
+      sub2:   I will not develop of software that is intended to violate human rights and civil liberties.
+      text2a: It is increasingly possible to violate personal and human rights with the use of software as the
+              boundaries between real and digital world become blurred.
+      text2b: I know that I can't control software once it is released so I have a responsibility to consider the
+              potential for my software to violate people’s right before I start to implement it. I will reject
+              projects which facilitate this abuse.
+
+      sub3:   I will be worthy of the faith in me as an expert of my profession.
+      text3a: The possible negative consequences of the improper use of complex software are
+              inconceivable to most users. Therefore it is our responsibility as software developers to
+              communicate the boundaries of proper use clearly.
+      text3b: When I realize that a software that I released is not applicable anymore, my minimum
+              responsibility is to let potential and existing users know.
+      sub4:   I will collect only the data that is essential for my task. I will store it only as long as needed.
+      text4:  My applications are likely to collect personal information. I will safeguard this, and use it only
+              as the provider of the information intended. I will treat their data as if it were my own.
+      sub5:   I will do my very best to prevent the waste of energy and resources.
+      text5:  The increasing number of devices that contain software has a strong impact on the global use
+              of resources and energy.
+    footer:   I make these promises solemnly, freely and upon my honor.
+    signers:  View who already signed the manifesto
+    signed:   Thank you! You've just signed the manifesto! Do you know other software developers who could be interested, too? Please spread the word!
+  form:
+    headline: I sign the Manifesto for Responsible Software Development
+    privacy:
+      header: 'Privacy policy:'
+      text:   We need your e-mail address in order to send you a validation message. When you validate your e-mail, we will
+              add your name to the list. We will not use your e-mail address in any other way. As soon as you confirmed your
+              e-mail address, we will store it only in an encrypted form to validate it's uniqueness.
+  coder:
+    create: Sign the Manifesto
+    check_your_email_html:  Thank you! We just sent you a message to <strong>%{email}</strong>.
+                            Please check your emails and validate your address by clicking the link!
+    placeholder:
+      email: Your e-mail address
+      name: Your name
+      location: Your location (optionally)
+  signers:
+    headline: All these people take responsibility for their work!
+  activerecord:
+    errors:
+      models:
+        coder:
+          attributes:
+            email:
+              blank: Please enter a valid email address
+            name:
+              blank: Please enter your name

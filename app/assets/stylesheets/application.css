@@ -1,0 +1,87 @@
+/*
+ *= require_tree .
+ *= require bootstrap.min
+ *= require jquery-ui
+ *= require jquery.fullPage
+ *= require_self
+*/
+
+html,body,.container-fluid {
+  height: 100%;
+  padding: 0px;
+}
+
+#header, #footer{
+  position:fixed;
+  height: 40px;
+  display:block;
+  width: 100%;
+  background: #666;
+  z-index:9;
+  text-align:center;
+  color: #f2f2f2;
+  padding: 10px 0 0 0;
+}
+
+#header{
+  top:0px;
+}
+
+#footer{
+  bottom:0px;
+}
+
+.manifesto-title h1 {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+.manifesto-head h3 {
+  font-size: 12pt;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+.manifesto-content {
+  padding: 25px 10px 0px;
+  font-size: 9pt;
+}
+
+.manifesto-content p {
+  padding: 0px 0px 0px 25px;
+}
+
+.manifesto-content i {
+  font-size: 11pt;
+}
+
+.manifesto-link {
+  padding: 25px 10px;
+}
+
+.manifesto-short h1 {
+  font-size: 14pt;
+  font-weight: bold;
+  padding: 0px 10px 25px;
+}
+
+.manifesto-short p {
+  font-size: 9pt;
+  font-weight: bold;
+  padding: 0px 25px 0px;
+}
+
+.manifesto-form {
+  padding: 25px 10px 0px;
+}
+
+.manifesto-privacy {
+  font-size: 8pt;
+  padding: 25px 10px;
+}
+
+.manifesto-signers {
+  padding: 25px 5px 25px;
+}

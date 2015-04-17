@@ -1,0 +1,6 @@
+<%- container = '#new_coder' %>
+<%- if @coder.errors.present? -%>
+  $("<%= container %>").html("<%= escape_javascript(render 'form', locals: { coder: @coder }) %>");
+<%- else -%>
+  $("<%= container %>").html("<%= t('coder.check_your_email_html', email: @coder.email) %>");
+<%- end %>
