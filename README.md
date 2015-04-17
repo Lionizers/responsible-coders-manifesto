@@ -1,4 +1,4 @@
-[Visit the Manifesto for Responsible Software Development](https//manifesto.responsiblesoftware.org/)
+[Visit the Manifesto for Responsible Software Development](http://manifesto.responsiblesoftware.org/)
 
 # Manifesto for Responsible Software Development
 **In order to foster a free and fair society I affirm that I will practice my profession with responsibly and with dignity. I will abide by the following principles:**
