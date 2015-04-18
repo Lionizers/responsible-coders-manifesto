@@ -3,6 +3,7 @@
  *= require bootstrap.min
  *= require jquery-ui
  *= require jquery.fullPage
+ *= require responsive
  *= require_self
 */
 
