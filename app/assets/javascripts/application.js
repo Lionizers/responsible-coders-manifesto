@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.fullPage
 //= require jquery.slimscroll.min
+//= require jquery.fullPage
 //= require bootstrap.min
 //= require_tree .

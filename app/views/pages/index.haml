@@ -7,7 +7,8 @@
       css3: true,
       scrollOverflow: true,
       navigation: true,
-      paddingBottom: '30px'
+      paddingButton: '30px',
+      responsive: 900
     });
   });
 
@@ -25,7 +26,6 @@
         .col-sm-offset-2.col-sm-8
           %h3= I18n.t('manifesto.headline.row1')
           %h3= I18n.t('manifesto.headline.row2')
-          %h3= I18n.t('manifesto.headline.row3')
 
     .manifesto-content
       .row
@@ -97,7 +97,6 @@
           =link_to I18n.t('manifesto.signers'), '#signers'
 
   .section#section2
-
     - if flash[:signed_up]
       .manifesto-notice
         .row
