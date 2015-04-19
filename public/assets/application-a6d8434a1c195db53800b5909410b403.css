@@ -1,3 +1,27 @@
+@media (min-width: 769px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+  #github {
+    display: none;
+    visibility:hidden;
+  }
+
+  #footer{
+    font-size: 4pt;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+
+}
 /*!
  * Bootstrap v3.3.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -1746,22 +1770,46 @@ html, body {
 
 
 
+
 */
 
 
-html,body,.container-fluid {
-  height: 100%;
-  padding: 0px;
+.container-fluid {
+  padding: 0;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  min-height: 40px;
+  background: #666;
+  font-size: 9pt;
+  z-index:9;
+  color: #f2f2f2;
+}
+
+.footer .container-fluid .row {
+  margin: 10px 0;
+}
+
+
+#header{
+  top:0px;
+}
+
+#footer{
+  bottom:0px;
 }
 
 .manifesto-title h1 {
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: bold;
   text-align: center;
 }
 
 .manifesto-head h3 {
-  font-size: 14pt;
+  font-size: 12pt;
   margin-top: 2px;
   margin-bottom: 2px;
   text-align: center;
@@ -1807,4 +1855,8 @@ html,body,.container-fluid {
 
 .manifesto-signers {
   padding: 25px 5px 25px;
+}
+
+.coder {
+  padding-top: 15px;
 }
