@@ -1,0 +1,17 @@
+- if flash[:signed_up]
+  .manifesto-notice
+    .row
+      .col-sm-offset-1.col-sm-10
+        .alert.alert-success
+          %p= I18n.t('manifesto.signed')
+
+.manifesto-title
+  .row
+    .col-sm-offset-2.col-sm-8
+      %h1= t('signers.headline')
+
+.manifesto-signers
+  .row
+    .col-sm-offset-1.col-sm-10
+      .row
+        = render @coders

@@ -13,7 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.slimscroll.min
-//= require jquery.fullPage
+//= require jquery.scrollTo
 //= require bootstrap.min
 //= require_tree .
+
+$(document).ready(function(){
+    $("#sign_link").click(function(e){
+      e.preventDefault();
+      $('html,body').scrollTo(document.getElementById('form'), 800);
+    });
+  });
+
+$(document).ready(function(){
+    $("#view_link").click(function(e){
+      e.preventDefault();
+      $('html,body').scrollTo(document.getElementById('signers'), 800);
+    });
+  });

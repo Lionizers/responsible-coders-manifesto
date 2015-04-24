@@ -1,116 +1,45 @@
-:javascript
-  $(document).ready(function() {
-    $('#fullpage').fullpage({
-      anchors: ['start', 'form', 'signers'],
-      sectionsColor: ['#FFFEFD', '##F7F7F9', '#FDFCFB'],
-      resize: true,
-      css3: true,
-      scrollOverflow: true,
-      navigation: true,
-      paddingButton: '30px',
-      responsive: 900
-    });
-  });
+%section.section#manifesto
+
+  = render 'github'
+  = render 'manifesto'
+
+  .manifesto-link
+    .row
+      .col-sm-offset-4.col-sm-4
+        =link_to I18n.t('coder.create'), '#form', :id => "sign_link", :class => "btn btn-success btn-sm btn-block"
 
 
-#fullpage
-  .section#section0
-    = render 'github'
-    .manifesto-title
-      .row
-        .col-sm-offset-2.col-sm-8
-          %h1= I18n.t('manifesto.title')
+%section.section#form
 
-    .manifesto-head
-      .row
-        .col-sm-offset-2.col-sm-8
-          %h3= I18n.t('manifesto.headline.row1')
-          %h3= I18n.t('manifesto.headline.row2')
+  .manifesto-short
+    .row
+      .col-sm-offset-2.col-sm-10
+        %h1= I18n.t('form.headline')
 
-    .manifesto-content
-      .row
-        .col-sm-offset-2.col-sm-8
-          %b= I18n.t('manifesto.content.sub1')
-          %p= I18n.t('manifesto.content.text1')
+    .row
+      .col-sm-offset-2.col-sm-8
+        %p= I18n.t('manifesto.content.sub1')
+        %p= I18n.t('manifesto.content.sub2')
+        %p= I18n.t('manifesto.content.sub3')
+        %p= I18n.t('manifesto.content.sub4')
+        %p= I18n.t('manifesto.content.sub5')
+        %p= I18n.t('manifesto.footer')
 
-      .row
-        .col-sm-offset-2.col-sm-8
-          %b= I18n.t('manifesto.content.sub2')
-          %p= I18n.t('manifesto.content.text2a')
-          %p= I18n.t('manifesto.content.text2b')
+  .manifesto-form
+    .row
+      .col-sm-offset-2.col-sm-8
+        = render 'coders/form'
 
-      .row
-        .col-sm-offset-2.col-sm-8
-          %b= I18n.t('manifesto.content.sub3')
-          %p= I18n.t('manifesto.content.text3a')
-          %p= I18n.t('manifesto.content.text3b')
+  .manifesto-privacy
+    .row
+      .col-sm-offset-2.col-sm-8
+        %b= I18n.t('form.privacy.header')
+        %p= I18n.t('form.privacy.text')
 
-      .row
-        .col-sm-offset-2.col-sm-8
-          %b= I18n.t('manifesto.content.sub4')
-          %p= I18n.t('manifesto.content.text4')
+  .manifesto-link
+    .row
+      .col-sm-offset-4.col-sm-4
+        =link_to I18n.t('manifesto.signers'), '#signers', :id => "view_link"
 
-      .row
-        .col-sm-offset-2.col-sm-8
-          %b= I18n.t('manifesto.content.sub5')
-          %p= I18n.t('manifesto.content.text5')
-
-      .row
-        .col-sm-offset-2.col-sm-8
-          %i= I18n.t('manifesto.footer')
-
-    .manifesto-link
-      .row
-        .col-sm-offset-4.col-sm-4
-          =link_to I18n.t('coder.create'), '#form', :class => "btn btn-success btn-sm btn-block"
-
-  .section#section1
-
-    .manifesto-short
-      .row
-        .col-md-offset-2.col-md-10
-          %h1= I18n.t('form.headline')
-
-      .row
-        .col-md-offset-2.col-md-8
-          %p= I18n.t('manifesto.content.sub1')
-          %p= I18n.t('manifesto.content.sub2')
-          %p= I18n.t('manifesto.content.sub3')
-          %p= I18n.t('manifesto.content.sub4')
-          %p= I18n.t('manifesto.content.sub5')
-          %p= I18n.t('manifesto.footer')
-
-    .manifesto-form
-      .row
-        .col-md-offset-2.col-md-8
-          = render 'coders/form'
-
-    .manifesto-privacy
-      .row
-        .col-md-offset-2.col-md-8
-          %b= I18n.t('form.privacy.header')
-          %p= I18n.t('form.privacy.text')
-
-    .manifesto-link
-      .row
-        .col-sm-offset-4.col-sm-4
-          =link_to I18n.t('manifesto.signers'), '#signers'
-
-  .section#section2
-    - if flash[:signed_up]
-      .manifesto-notice
-        .row
-          .col-md-offset-1.col-md-10
-            .alert.alert-success
-              %p= I18n.t('manifesto.signed')
-
-    .manifesto-title
-      .row
-        .col-md-offset-2.col-md-8
-          %h1= t('signers.headline')
-
-    .manifesto-signers
-      .row
-        .col-md-offset-1.col-md-10
-          .row
-            = render @coders
+%section.section#signers
+  = render 'signers'

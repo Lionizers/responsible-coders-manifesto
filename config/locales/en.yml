@@ -3,8 +3,12 @@ en:
   manifesto:
     title: Manifesto for Responsible Software Development
     headline:
-      row1: "In order to foster a free and fair society I affirm that I will practice my profession with responsibly and with dignity."
-      row2: "I will abide by the following principles:"
+      row1: In order to foster a free and fair society I affirm that I will
+      row2: practice my profession with responsibly and with
+      row3: "dignity. I will abide by the following principles:"
+      row1a: "In order to foster a free and fair society I affirm that I will
+              practice my profession with responsibly and with dignity.
+              I will abide by the following principles:"
     content:
       sub1:   I am ethically responsible for my decisions and I will act according to my conscience.
       text1:  The impact of software is growing continuously in all areas of our lives. I acknowledge the

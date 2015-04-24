@@ -2,13 +2,17 @@
  *= require_tree .
  *= require bootstrap.min
  *= require jquery-ui
- *= require jquery.fullPage
  *= require responsive
  *= require_self
 */
 
 .container-fluid {
   padding: 0;
+  margin: 0;
+}
+
+.row {
+  margin: 0px;
 }
 
 .footer {
@@ -26,31 +30,58 @@
   margin: 10px 0;
 }
 
-
-#header{
-  top:0px;
+#content {
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 40px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 
 #footer{
   bottom:0px;
 }
 
+#manifesto {
+  background: #FFFEFD;
+  padding: 25px 0px 50px;
+}
+
+#form {
+  background: #F7F7F9;
+  padding: 50px 0px;
+}
+
+#signers {
+  background: #FDFCFB;
+  padding: 50px 0px;
+}
+
 .manifesto-title h1 {
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: bold;
   text-align: center;
 }
 
 .manifesto-head h3 {
-  font-size: 12pt;
+  font-size: 14pt;
   margin-top: 2px;
   margin-bottom: 2px;
   text-align: center;
 }
 
+.manifesto-small-head h3 {
+  font-size: 14pt;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-align: left;
+}
+
 .manifesto-content {
   padding: 25px 10px 0px;
-  font-size: 9pt;
+  font-size: 12pt;
 }
 
 .manifesto-content p {
@@ -58,7 +89,7 @@
 }
 
 .manifesto-content i {
-  font-size: 11pt;
+  font-size: 12pt;
 }
 
 .manifesto-link {
@@ -66,13 +97,13 @@
 }
 
 .manifesto-short h1 {
-  font-size: 14pt;
+  font-size: 16pt;
   font-weight: bold;
   padding: 0px 10px 25px;
 }
 
 .manifesto-short p {
-  font-size: 9pt;
+  font-size: 12pt;
   font-weight: bold;
   padding: 0px 25px 0px;
 }
