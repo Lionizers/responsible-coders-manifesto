@@ -30,6 +30,11 @@
   margin: 10px 0;
 }
 
+.footer a {
+  color: #bbb;
+  text-decoration: underline;
+}
+
 #content {
   display: block;
   width: 100%;
