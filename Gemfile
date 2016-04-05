@@ -30,5 +30,7 @@ gem 'factory_girl'
 gem 'piwik_analytics', '~> 1.0.2'
 
 group :development do
-    gem 'capistrano'
+  gem 'capistrano'
+  gem 'capistrano-passenger'
+  gem 'capistrano-rbenv'
 end
