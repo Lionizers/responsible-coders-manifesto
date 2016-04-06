@@ -21,6 +21,6 @@ test:
 
 production:
   <<: *default
-  database: responsible-coders-manifesto_production
+  database: <%= ENV["POSTGRES_DB"] %>
   username: <%= ENV["POSTGRES_USER"] %>
   password: <%= ENV["POSTGRES_PASS"] %>
