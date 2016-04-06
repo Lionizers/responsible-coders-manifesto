@@ -16,6 +16,7 @@ gem 'bootstrap_form'
 
 gem 'puma'
 gem 'rack-timeout'
+gem 'dotenv-rails'
 
 gem 'rspec-rails', '~> 3.1.0', group: 'test'
 gem 'guard-rspec'
