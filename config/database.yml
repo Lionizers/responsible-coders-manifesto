@@ -10,10 +10,9 @@ test:
 
 production:
   adapter: postgresql
-  encoding: unicode
   host: localhost
   port: 5432
   pool: 5
-  database: <%= ENV.fetch('POSTGRES_DB', '') %>
-  username: <%= ENV.fetch('POSTGRES_USER', '') %>
-  password: <%= ENV.fetch('POSTGRES_PASS', '') %>
+  database: <%= Rails.application.secrets[:database][:name] %>
+  username: <%= Rails.application.secrets[:database][:username] %>
+  password: <%= Rails.application.secrets[:database][:password] %>
