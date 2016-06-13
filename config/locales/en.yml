@@ -4,10 +4,10 @@ en:
     title: Manifesto for Responsible Software Development
     headline:
       row1: In order to foster a free and fair society I affirm that I will
-      row2: practice my profession with responsibly and with
+      row2: practice my profession with responsibility and with
       row3: "dignity. I will abide by the following principles:"
       row1a: "In order to foster a free and fair society I affirm that I will
-              practice my profession with responsibly and with dignity.
+              practice my profession with responsibility and with dignity.
               I will abide by the following principles:"
     content:
       sub1:   I am ethically responsible for my decisions and I will act according to my conscience.
@@ -17,7 +17,7 @@ en:
       text2a: It is increasingly possible to violate personal and human rights with the use of software as the
               boundaries between real and digital world become blurred.
       text2b: I know that I can't control software once it is released so I have a responsibility to consider the
-              potential for my software to violate people’s right before I start to implement it. I will reject
+              potential for my software to violate people’s rights before I start to implement it. I will reject
               projects which facilitate this abuse.
 
       sub3:   I will be worthy of the faith in me as an expert of my profession.

@@ -23,7 +23,7 @@ set :deploy_to, '/data/manifesto.responsiblesoftware.org'
 # set :pty, true
 
 # Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push('.rbenv-vars', 'config/secrets.yml')
+set :linked_files, fetch(:linked_files, []).push('.env')
 
 # Default value for linked_dirs is []
 # set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
@@ -36,7 +36,7 @@ set :linked_files, fetch(:linked_files, []).push('.rbenv-vars', 'config/secrets.
 
 # config/deploy.rb
 set :rbenv_type, :user
-set :rbenv_ruby, '2.2.3'
+set :rbenv_ruby, '2.3.0'
 
 namespace :deploy do
 

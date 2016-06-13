@@ -1,18 +1,19 @@
+defaults: &default
+  adapter: sqlite3
+  encoding: utf8
+
 development:
-  pool: 5
-  timeout: 5000
+  <<: *default
   database: db/development.sqlite3
 
 test:
-  pool: 5
-  timeout: 5000
-  database: db/test.sqlite3
+  <<: *default
+  database: db/development.sqlite3_test
 
 production:
+  <<: *default
   adapter: postgresql
   host: localhost
-  port: 5432
-  pool: 5
-  database: <%= Rails.application.secrets[:database][:name] %>
-  username: <%= Rails.application.secrets[:database][:username] %>
-  password: <%= Rails.application.secrets[:database][:password] %>
+  database: <%= ENV['POSTGRES_DB'] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASS'] %>
