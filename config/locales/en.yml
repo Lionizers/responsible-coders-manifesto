@@ -64,3 +64,6 @@ en:
   email:
     subject: Sign the Manifesto for Responsible Software Development
     error: Please fix the errors below.
+  languages:
+      english: English
+      spanish: Spanish

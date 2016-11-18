@@ -70,3 +70,6 @@ es:
   email:
     subject: Firma el Manifiesto por el Desarrollo Responsable de Software
     error: Por favor, revisa los siguientes errores.
+  languages:
+      english: Inglés
+      spanish: Castellano
