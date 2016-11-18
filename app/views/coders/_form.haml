@@ -1,5 +1,5 @@
-= bootstrap_form_for(@coder, url: coders_path, remote: true, layout: :inline, inline_errors: false ) do |coder|
-  = coder.alert_message "Please fix the errors below."
+= bootstrap_form_for(@coder, url: coders_path(:locale=>I18n.locale), remote: true, layout: :inline, inline_errors: false ) do |coder|
+  = coder.alert_message t('email.error')
   = coder.text_field :name, placeholder: t('coder.placeholder.name'), hide_label: true
   = coder.email_field :email, placeholder: t('coder.placeholder.email'), hide_label: true
   = coder.submit I18n.t('coder.create'), class: "btn btn-success btn-md"
