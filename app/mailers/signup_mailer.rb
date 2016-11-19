@@ -3,8 +3,8 @@ class SignupMailer < ActionMailer::Base
 
   def verify_email(coder)
     @coder = coder
-    @url = coders_verify_url(token: @coder.token)
-    mail(to: @coder.email, subject: 'Sign the Manifesto for Responsible Software Development')
+    @url = coders_verify_url(token: @coder.token, locale: I18n.locale)
+    mail(to: @coder.email, subject: I18n.t('email.subject'))
   end
 
 end

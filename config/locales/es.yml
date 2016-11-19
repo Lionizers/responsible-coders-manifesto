@@ -1,0 +1,75 @@
+es:
+  hello: "Hola mundo"
+  manifesto:
+    title: Manifiesto por el Desarrollo Responsable de Software
+    headline:
+      row1: En aras de una sociedad libre y justa, afirmo que
+      row2: ejerceré mi profesión con responsabilidad y
+      row3: "dignidad. Para ello, me regiré por los siguientes principios:"
+      row1a: "En aras de una sociedad libre y justa, afirmo que ejerceré
+              mi profesión con responsabiliadad y dignidad.
+              Para ello, me regiré por los siguientes principios:"
+    content:
+      sub1:   Soy éticamente responsable de mi decisión y actuaré de acuerdo con mi conciencia.
+      text1:  El impacto del software en todas las diferentes áreas de nuestras vides está en constante crecimiento. Tengo conocimiento de
+              las consecuencias de este hecho sobre la humanidad y el entorno que envuelve nuestro trabajo.
+      sub2:   No desarrollaré software que tenga como objetivo violar los derechos humanos y las libertades civiles.
+      text2a: Cada vez es más fácil violar los derechos personales y humanos con el uso del software debido
+              a que el límite entre lo real y lo digital se difumina.
+      text2b: Soy consciente de que no puedo controlar el software una vez sea liberado por lo que es responsabilidad mía tener en cuenta
+              el potencial de mi software para violar los derechos humanos antes de empezar el desarrollo. Por esto mismo, rechazaré
+              proyectos que faciliten este abuso.
+      sub3:   Tendré presente la confianza puesta en mí como experto en mi profesión.
+      text3a: Las posibles consecuencias negativas del uso indebido de software complejo son
+              inconcebibles para la mayoría de los usuarios. Por lo que es nuestra responsabilidad como desarrolladores de software el
+              comunicar claramente dónde están los límites de un uso apropiado.
+      text3b: Cuando me de cuenta de que un software que he liberado ya no realiza su función de manera correcta, mi responsabilidad
+              mínima es comunicar este hecho a los usuarios.
+      sub4:   Solo recopilaré datos que sean imprescindibles para desempeñar mi tarea y solo los mantendré el tiempo que sea necesario.
+      text4:  Es probable que mis aplicaciones recopile información personal. La pondré a buen recaudo y solo la usaré
+              de la forma en que el proveedor de dicha información espera. Trataré sus datos como si fueran míos.
+      sub5:   Haré todo lo que esté en mi mano para evitar el malgasto de energía y recursos.
+      text5:  El aumento del número de dispositivos que contienen software tiene un fuerte impacto en el uso de
+              recursos y energía a nivel global.
+    footer:   Prometo solemne y libremente por mi honor, que cumpliré con lo arriba escrito.
+    signers:  Mira quien ha firmado el manifiesto
+    signed:   ¡Gracias! ¡Acabas de firmar el manifiesto! ¿Sabes de otros desarrolladores de software que puedan estar interesados? Por favor… ¡Corre la voz!
+  form:
+    headline: Firmo el Manifiesto por el Desarrollo Responsable de Software
+    privacy:
+      header: 'Política de privacidad:'
+      text:   Necesitamos tu dirección de e-mail para enviarte un mensaje de validación. Cuando valides tu e-mail, añadiremos
+              tu nombre a la lista. No usaremos tu dirección de e-mail para ninguna otra cosa. Tan pronto como confirmes tu
+              dirección de e-mail, lo guardaremos encriptado para validar su unicidad.
+  coder:
+    create: Firmar el manifiesto
+    check_your_email_html:  ¡Gracias! Acabamos de mandarte un mensaje a <strong>%{email}</strong>.
+                            Por favor… ¡Comprueba si has recibido algún e-mail y valida tu dirección haciendo clic en el enlace!
+    placeholder:
+      email: Tu dirección de e-mail
+      name: Tu nombre
+      location: Tu localización (opcional)
+  signers:
+    headline: ¡Todas estas personas son responsables con su trabajo!
+  activerecord:
+    attributes:
+      coder:
+        email_hash: E-mail
+        email: E-mail
+        name: Nombre
+    errors:
+      models:
+        coder:
+          attributes:
+            email_hash:
+              taken: Esta dirección de e-mail ya ha sido utilizada
+            email:
+              blank: Por favor, introduce un e-mail válido
+            name:
+              blank: Por favor, introduce tu nombre
+  email:
+    subject: Firma el Manifiesto por el Desarrollo Responsable de Software
+    error: Por favor, revisa los siguientes errores.
+  languages:
+      english: Inglés
+      spanish: Castellano

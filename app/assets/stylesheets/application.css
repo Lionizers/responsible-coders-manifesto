@@ -84,6 +84,11 @@
   text-align: left;
 }
 
+.manifiesto-i18n p {
+    margin-top: 30px;
+    text-align: center;
+}
+
 .manifesto-content {
   padding: 25px 10px 0px;
   font-size: 12pt;
