@@ -34,7 +34,7 @@ set :linked_files, fetch(:linked_files, []).push('.env')
 
 # config/deploy.rb
 set :rbenv_type, :user
-set :rbenv_ruby, '2.3.0'
+set :rbenv_ruby, '2.3.1'
 
 namespace :deploy do
 
