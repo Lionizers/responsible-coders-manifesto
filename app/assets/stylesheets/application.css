@@ -133,3 +133,7 @@
 .coder {
   padding-top: 15px;
 }
+
+.g-recaptcha {
+   margin: 15px auto !important;
+}
