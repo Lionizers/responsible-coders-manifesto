@@ -1,5 +1,5 @@
+# frozen_string_literal: true
 class PagesController < ApplicationController
-
   def index
     @coders = Coder.where(Coder.arel_table[:verified].eq(true))
     @coder = Coder.new
@@ -11,5 +11,4 @@ class PagesController < ApplicationController
 
   def check
   end
-
 end

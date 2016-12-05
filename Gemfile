@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 source 'https://rubygems.org'
 
 gem 'rails', '4.1.9'
@@ -15,11 +16,10 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
-gem 'spring',        group: :development
+gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'spring', group: :development
 
 gem 'piwik_analytics', '~> 1.0.2'
-
 
 gem 'bootstrap_form'
 gem 'devise'
@@ -30,12 +30,14 @@ gem 'capistrano-bundler'
 gem 'capistrano-rails', require: false
 gem 'capistrano-passenger'
 gem 'capistrano-rbenv'
-gem 'recaptcha', :require => 'recaptcha/rails'
+gem 'recaptcha', require: 'recaptcha/rails'
 
 group :development, :test do
+  gem 'rubocop'
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.1.0'
   gem 'guard-rspec'
+  gem 'guard-rubocop'
   gem 'annotate'
   gem 'ci_reporter', '1.8.0'
   gem 'rspec-legacy_formatters'

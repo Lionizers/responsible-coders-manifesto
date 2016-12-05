@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: coders
@@ -13,15 +14,15 @@
 #
 
 class CodersController < ApplicationController
-
   # Called from sign-form
   def create
     @coder = Coder.new(coder_params)
 
-    if @coder.valid? && verify_recaptcha(:model => @coder, :message => "Please enter the correct captcha!")
-      @coder.save
-      SignupMailer.verify_email(@coder).deliver
-    end
+    return unless @coder.valid?
+    return unless verify_recaptcha(model: @coder, message: 'Please enter the correct captcha!')
+
+    @coder.save
+    SignupMailer.verify_email(@coder).deliver
   end
 
   def create_coder_successful(_)
@@ -30,7 +31,7 @@ class CodersController < ApplicationController
     end
   end
 
-  alias_method :create_coder_failed, :create_coder_successful
+  alias create_coder_failed create_coder_successful
 
   # Called from email-link
   def verify
@@ -39,18 +40,17 @@ class CodersController < ApplicationController
     unless @coder.verified?
       @coder.verified = true
 
-      @coder.email = "obfuscated"
+      @coder.email = 'obfuscated'
       @coder.save
       flash[:signed_up] = true
     end
 
-    redirect_to :controller => 'pages', :action => 'index', :anchor => 'signers'
+    redirect_to controller: 'pages', action: 'index', anchor: 'signers'
   end
 
   private
 
-    def coder_params
-      params.require(:coder).permit(:name, :email, :location, :token)
-    end
-
+  def coder_params
+    params.require(:coder).permit(:name, :email, :location, :token)
+  end
 end

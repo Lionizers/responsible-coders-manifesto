@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: coders
@@ -13,7 +14,6 @@
 #
 
 class Coder < ActiveRecord::Base
-
   validates :name, presence: true
   validates :email, presence: true
   validates_uniqueness_of :email_hash
@@ -31,6 +31,6 @@ class Coder < ActiveRecord::Base
   end
 
   def encrypt_email
-    self.email_hash = Digest::SHA1.hexdigest(self.email.to_s) unless self.email == "obfuscated"
+    self.email_hash = Digest::SHA1.hexdigest(email.to_s) unless email == 'obfuscated'
   end
 end

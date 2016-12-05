@@ -1,7 +1,7 @@
+# frozen_string_literal: true
 require 'rails_helper'
 
 RSpec.describe CodersController, type: :controller do
-
   describe 'POST create with valid user' do
     let!(:name) { 'Responsible Guy' }
     let!(:email) { 'guy@example.com' }
@@ -12,28 +12,28 @@ RSpec.describe CodersController, type: :controller do
       post :create, params
     end
 
-     it 'responds with the 200 code' do
-       expect(response.status).to be(200)
-     end
+    it 'responds with the 200 code' do
+      expect(response.status).to be(200)
+    end
 
-     it 'creates a new coder' do
-       expect(Coder.count).to be 1
-     end
+    it 'creates a new coder' do
+      expect(Coder.count).to be 1
+    end
 
-     it 'creates the coder with the given name' do
-       expect(Coder.first.name).to eq(name)
-     end
+    it 'creates the coder with the given name' do
+      expect(Coder.first.name).to eq(name)
+    end
 
-     it 'creates the coder with the given email' do
-       expect(Coder.first.email).to eq(email)
-     end
+    it 'creates the coder with the given email' do
+      expect(Coder.first.email).to eq(email)
+    end
 
-     it 'checks if the coder is valid' do
-       expect(Coder.first).to be_valid
-     end
+    it 'checks if the coder is valid' do
+      expect(Coder.first).to be_valid
+    end
 
     it 'sends an email to the coder' do
-      ActionMailer::Base.deliveries.count.should == 1
+      expect(ActionMailer::Base.deliveries.count).to be 1
     end
   end
 
@@ -50,28 +50,28 @@ RSpec.describe CodersController, type: :controller do
         post :create, params
       end
 
-       it 'responds with the 200 code' do
-         expect(response.status).to be(200)
-       end
+      it 'responds with the 200 code' do
+        expect(response.status).to be(200)
+      end
 
-       it 'does not create a new coder' do
-         expect(Coder.count).to be 1
-       end
+      it 'does not create a new coder' do
+        expect(Coder.count).to be 1
+      end
 
-       it 'does not change the name of the user' do
-         expect(Coder.first.name).to eq('Old user')
-       end
+      it 'does not change the name of the user' do
+        expect(Coder.first.name).to eq('Old user')
+      end
 
-       it 'does not change the email of the old user' do
-         expect(Coder.first.email).to eq(email)
-       end
+      it 'does not change the email of the old user' do
+        expect(Coder.first.email).to eq(email)
+      end
 
-       it 'checks if the coder is valid' do
-         expect(Coder.first).to be_valid
-       end
+      it 'checks if the coder is valid' do
+        expect(Coder.first).to be_valid
+      end
 
       it 'sends an email to the coder' do
-        ActionMailer::Base.deliveries.count.should == 0
+        expect(ActionMailer::Base.deliveries.count).to be 0
       end
     end
   end

@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 # == Schema Information
 #
 # Table name: coders
@@ -15,9 +16,8 @@
 require 'rails_helper'
 
 describe Coder do
-
   subject do
-    coder = Coder.create!(name: "Test User", email: "user@example.com")
+    Coder.create!(name: 'Test User', email: 'user@example.com')
   end
 
   it { should respond_to(:name) }
@@ -28,26 +28,24 @@ describe Coder do
 
   it { should be_valid }
 
-  it "should have valid factory" do
+  it 'should have valid factory' do
     expect(create(:coder)).to be_valid
   end
 
-  it "is must have a name" do
+  it 'is must have a name' do
     subject.name = nil
     expect(subject).to be_invalid
   end
 
-  it "is must have an email" do
+  it 'is must have an email' do
     subject.email = nil
     expect(subject).to be_invalid
   end
 
-  it "should have an unique email" do
-    coder1 = Coder.create(name: "Test User", email: "user@example.com")
-    coder2 = Coder.create(name: "Test User", email: "user@example.com")
+  it 'should have an unique email' do
+    coder1 = Coder.create(name: 'Test User', email: 'user@example.com')
+    coder2 = Coder.create(name: 'Test User', email: 'user@example.com')
     expect(coder1).to be_valid
     expect(coder2).to be_invalid
-
   end
-
 end
