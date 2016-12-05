@@ -17,15 +17,11 @@ class CodersController < ApplicationController
   # Called from sign-form
   def create
     @coder = Coder.new(coder_params)
-    @coder.valid?
 
-    if verify_recaptcha(:model => @coder, :message => "Please enter the correct captcha!")
-
-         @coder.save
-
+    if @coder.valid? && verify_recaptcha(:model => @coder, :message => "Please enter the correct captcha!")
+      @coder.save
+      SignupMailer.verify_email(@coder).deliver
     end
-
-    SignupMailer.verify_email(@coder).deliver
   end
 
   def create_coder_successful(_)
@@ -42,6 +38,7 @@ class CodersController < ApplicationController
 
     unless @coder.verified?
       @coder.verified = true
+
       @coder.email = "obfuscated"
       @coder.save
       flash[:signed_up] = true
