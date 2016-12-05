@@ -2,4 +2,5 @@
   = coder.alert_message t('email.error')
   = coder.text_field :name, placeholder: t('coder.placeholder.name'), hide_label: true
   = coder.email_field :email, placeholder: t('coder.placeholder.email'), hide_label: true
+  <div class="g-recaptcha" data-sitekey= #{Rails.application.secrets.recaptcha_site_key} ></div>
   = coder.submit I18n.t('coder.create'), class: "btn btn-success btn-md"

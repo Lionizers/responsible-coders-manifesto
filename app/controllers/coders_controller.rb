@@ -17,7 +17,14 @@ class CodersController < ApplicationController
   # Called from sign-form
   def create
     @coder = Coder.new(coder_params)
-    @coder.save
+    @coder.valid?
+
+    if verify_recaptcha(:model => @coder, :message => "Please enter the correct captcha!")
+
+         @coder.save
+
+    end
+
     SignupMailer.verify_email(@coder).deliver
   end
 

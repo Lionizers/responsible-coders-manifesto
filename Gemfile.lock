@@ -165,6 +165,8 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     rdoc (4.3.0)
+    recaptcha (4.0.0)
+      json
     ref (2.0.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
@@ -265,6 +267,7 @@ DEPENDENCIES
   puma
   rack-timeout
   rails (= 4.1.9)
+  recaptcha
   rspec-legacy_formatters
   rspec-rails (~> 3.1.0)
   sass-rails (~> 4.0.3)

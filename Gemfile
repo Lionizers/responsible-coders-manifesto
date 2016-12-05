@@ -30,6 +30,7 @@ gem 'capistrano-bundler'
 gem 'capistrano-rails', require: false
 gem 'capistrano-passenger'
 gem 'capistrano-rbenv'
+gem 'recaptcha', :require => 'recaptcha/rails'
 
 group :development, :test do
   gem 'sqlite3'

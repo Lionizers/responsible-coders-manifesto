@@ -1,0 +1,25 @@
+#content {
+  text-align: center;
+}
+
+.manifesto-title h1 {
+  text-align: center;
+}
+
+.manifesto-head h3 {
+  text-align: center;
+}
+
+.manifiesto-i18n p {
+    text-align: center;
+}
+
+.g-recaptcha {
+   margin: 15px auto !important;
+   width: auto !important;
+   height: auto !important;
+   text-align: -webkit-center;
+   text-align: -moz-center;
+   text-align: -o-center;
+   text-align: -ms-center;
+}
