@@ -1,0 +1,75 @@
+de:
+  hello: "Hello world"
+  manifesto:
+    title: Manifest für eine verantwortungsvolle Entwicklung von Software
+    headline:
+      row1: In hoher Verpflichtung gegenüber einer freien und gerechten Gesellschaft
+      row2: gelobe ich, dass ich meinen Beruf mit Gewissenhaftigkeit und
+      row3: "Würde ausüben werde:"
+      row1a: "In hoher Verpflichtung gegenüber einer freien und gerechten Gesellschaft
+			  gelobe ich, dass ich meinen Beruf mit Gewissenhaftigkeit und Würde ausüben
+              werde:"
+    content:
+      sub1:   Ich übernehme die Verantwortung für die von mir geschaffene Software.
+      text1:  Der Einfluss von Software wächst kontinuierlich in allen wichtigen Bereichen unseres Lebens. Als
+              Softwareentwickler tragen wir alle eine stetig wachsende Verantwortung für die Konsequenzen,
+              die sich aus unserer Arbeit für Menschen und Umwelt ergeben.
+      sub2:   Ich werde mich dem Vertrauen, das mir als Fachexperte entgegengebracht wird, würdig erweisen.
+      text2a: Die möglichen negativen Konsequenzen, die sich durch den gutgläubigen Einsatz von komplexer
+              Software (wie z.B. Verschlüsselungstechnologie oder Fahrsicherheits-assistenten) ergeben
+              sind für Anwender meist nicht absehbar.
+      text2b: Es ist daher unsere Verantwortung, die Grenzen der
+              Anwendbarkeit zu kennen und klar zu kommunizieren.
+
+      sub3:   Ich lehne die Entwicklung von Software ab, die dazu dient, die persönlichen
+              Rechte meiner Mitmenschen zu verletzen.
+      text3a: Die verschwimmenden Grenzen zwischen digitaler und realer Welt eröffnen immer mehr
+              Möglichkeiten,
+      text3b: persönliche Grund- und Menschenrechte mit Hilfe von Software zu schwächen, zu
+              umgehen und zu brechen.
+      sub4:   Ich erhebe nur die Daten die zur Erfüllung einer Aufgabe notwendig sind und
+              speichere diese nur so lange, wie unbedingt nötig.
+      text4:  Der wachsende Grad an Vernetzung in unserem heutigen Leben führt zu immer größeren
+              Datenmengen, deren Nutzung zu potentiell immer größeren Eingriffen in das private und intime
+              Leben von Menschen führt.
+      sub5:   Ich nutze meine Möglichkeiten, zu einem verantwortungsvollen Energie- und
+              Ressourcenverbrauch beizutragen.
+      text5:  Die wachsende Anzahl von Geräten, in denen Software zum Einsatz kommt, hat
+              einen massiven Einfluss auf den globalen Energie- und Ressourcenverbrauch.
+    footer:   Dies alles verspreche ich feierlich und frei auf meine Ehre.
+    signers:  Wer hat das Manifest bisher unterzeichnet
+    signed:   Thank you! You've just signed the manifesto! Do you know other software developers who could be interested, too? Please spread the word!
+  form:
+    headline: Ich unterzeichne das Manifest für verantwortungsvolle Softwareentwicklung
+    privacy:
+      header: 'Datenschutz-Bestimmungen:'
+      text:   Wir benötigen Ihre E-Mail-Adresse, um Ihnen eine Bestätigungsmail zu senden.
+              Wenn Sie Ihre E-Mail bestätigen, werden wir Ihren Namen zur Liste hinzufügen. Ihre E-Mail-Adresse wird nicht anderweitig verwendet.
+              Sobald Sie Ihre E-Mail-Adresse bestätigt haben, speichern wir sie nur in verschlüsselter Form zur Bestätigung ihrer Eindeutigkeit.
+  coder:
+    create: Unterzeichne das Manifest
+    check_your_email_html:  Thank you! We just sent you a message to <strong>%{email}</strong>.
+                            Please check your emails and validate your address by clicking the link!
+    placeholder:
+      email: Deine E-mail adresse
+      name: Dein Name
+      location: Your location (optionally)
+  signers:
+    headline: Alle diese Leute übernehmen Verantwortung für ihre Arbeit!
+  activerecord:
+    errors:
+      models:
+        coder:
+          attributes:
+            email:
+              blank: Please enter a valid email address
+            name:
+              blank: Please enter your name
+  email:
+    subject: Sign the Manifesto for Responsible Software Development
+    error: Please fix the errors below.
+  languages:
+      english: Englisch
+      spanish: Spanisch
+      arabic:  Arabisch
+      deutsch: Deutsch

@@ -1,0 +1,10 @@
+%footer.footer
+  .container-fluid
+    .row
+      .col-md-10.col-md-offset-1.text-center
+        &copy 2015, #{link_to 'Friederike & Nils Löwe', 'http://loewe.io'} and many of the first signees.
+        This declaration may be freely copied in any form, but only in its entirety through this notice.
+      .col-md-1.text-right
+        =link_to 'Tweet', 'https://twitter.com/share', class: "twitter-share-button", :data => { :url => "http://manifesto.responsiblesoftware.org", :text => 'Do you take #responsibility for your work as a software developer?', :hashtags => "ResponsibleCoder" }
+        :javascript
+          window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));

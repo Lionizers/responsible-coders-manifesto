@@ -22,6 +22,6 @@ module CodersCode
     # config.i18n.default_locale = :de
     config.i18n.enforce_available_locales = false
 
-    config.i18n.available_locales = [:en, :es, :ar]
+    config.i18n.available_locales = [:en, :es, :ar, :de]
   end
 end

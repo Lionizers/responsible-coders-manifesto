@@ -63,6 +63,7 @@ ar:
     subject: التوقيع على ميثاق البرمجيات المسؤولة
     error: الرجاء الانتباه على الخطأ .
   languages:
-      english: English
-      spanish: Spanish
-      arabic:  Arabic
+      english: الإنكليزية
+      spanish: الإسبانية
+      arabic:  العربية
+      deutsch: الألمانية
