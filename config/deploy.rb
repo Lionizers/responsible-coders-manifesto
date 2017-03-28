@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # config valid only for current version of Capistrano
 set :application, 'responsible-coders-manifesto'
 set :repo_url, 'git@github.com:Lionizers/responsible-coders-manifesto.git'

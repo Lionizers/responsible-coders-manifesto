@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: coders
@@ -47,5 +48,10 @@ describe Coder do
     coder2 = Coder.create(name: 'Test User', email: 'user@example.com')
     expect(coder1).to be_valid
     expect(coder2).to be_invalid
+  end
+
+  it 'should send thanks email' do
+    coder1 = Coder.create(name: 'Test User', email: 'user@example.com')
+    expect(coder1).to be_valid
   end
 end

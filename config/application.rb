@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -22,8 +23,8 @@ module CodersCode
     # config.i18n.default_locale = :de
     config.i18n.enforce_available_locales = false
 
-    config.i18n.available_locales = [:en, :es, :ar, :de]
+    config.i18n.available_locales = %i(en es ar de)
 
-    config.assets.paths << "#{Rails.root}/vendor/assets"
+    config.assets.paths << Rails.root.join('vendor', 'assets')
   end
 end

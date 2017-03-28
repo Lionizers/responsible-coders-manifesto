@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class PagesController < ApplicationController
   def index
     @coders = Coder.where(Coder.arel_table[:verified].eq(true))

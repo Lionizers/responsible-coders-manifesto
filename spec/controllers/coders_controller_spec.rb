@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: coders
@@ -15,7 +16,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CodersController, type: :controller do
+RSpec.describe CodersController, type: :controller do # rubocop:disable Metrics/BlockLength
   describe 'POST create with valid user' do
     let!(:name) { 'Responsible Guy' }
     let!(:email) { 'guy@example.com' }
@@ -87,6 +88,60 @@ RSpec.describe CodersController, type: :controller do
       it 'sends an email to the coder' do
         expect(ActionMailer::Base.deliveries.count).to be 0
       end
+    end
+  end
+
+  describe 'GET verify with valid link' do
+    let!(:token) { 'abcde' }
+    let!(:coder) { create(:coder) }
+
+    before do
+      ActionMailer::Base.deliveries = []
+      get :verify, token: coder.token
+    end
+
+    it 'sends an email to the coder' do
+      expect(ActionMailer::Base.deliveries.count).to be 1
+    end
+
+    it 'verifies the coder' do
+      coder.reload
+      expect(coder.verified).to be true
+    end
+  end
+
+  describe 'GET verify with invalid link' do
+    let!(:token) { 'abcde' }
+    let!(:coder) { create(:coder) }
+
+    before do
+      ActionMailer::Base.deliveries = []
+      get :verify, token: 'not_the_token'
+    end
+
+    it 'sends no email to the coder' do
+      expect(ActionMailer::Base.deliveries.count).to be 0
+    end
+
+    it 'does not verify the coder' do
+      coder.reload
+      expect(coder.verified).to be false
+    end
+  end
+
+  describe 'GET verify for an already verified user' do
+    let!(:token) { 'abcde' }
+    let!(:coder) { create(:coder, verified: true) }
+
+    before do
+      ActionMailer::Base.deliveries = []
+      get :verify, token: coder.token
+    end
+
+    it 'verifies the coder and send second email' do
+      coder.reload
+      expect(coder.verified).to be true
+      expect(ActionMailer::Base.deliveries.count).to be 0
     end
   end
 end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: coders
@@ -37,9 +38,9 @@ class CodersController < ApplicationController
   def verify
     @coder = Coder.find_by token: params[:token]
 
-    unless @coder.verified?
+    if @coder.present? && @coder.verified? == false
       @coder.verified = true
-
+      SignupMailer.share_email(@coder).deliver
       @coder.email = 'obfuscated'
       @coder.save
       flash[:signed_up] = true

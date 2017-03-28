@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
@@ -9,7 +10,7 @@ task(:rubocop) do
   cli.run(%w(--rails))
 end
 
-task default: [:rubocop, :test]
+task default: %i(rubocop test)
 
 require File.expand_path('../config/application', __FILE__)
 

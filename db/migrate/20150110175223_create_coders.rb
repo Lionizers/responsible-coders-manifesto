@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class CreateCoders < ActiveRecord::Migration
   def change
     create_table :coders do |t|
