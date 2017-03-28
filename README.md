@@ -28,3 +28,8 @@ My applications are likely to collect personal information. I will safeguard thi
 The increasing number of devices that contain software has a strong impact on the global use of resources and energy.
 
 *I make these promises solemnly, freely and upon my honor.*
+
+# Develop / Run locally
+
+docker-sync start
+docker-compose up -d

@@ -1,0 +1,8 @@
+version: "2"
+syncs:
+  manifesto-sync:
+    src: './manifesto'
+    dest: '/app'
+  bundle-sync:
+    src: './bundle'
+    dest: '/bundle'
