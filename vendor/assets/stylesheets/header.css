@@ -1,0 +1,121 @@
+/* -----------------------------------
+Template:  P-folio One Page Parallax Portfolio Template
+Author: RoyHridoy
+Version: 1.0
+Design and Developed by: Hridoy Roy
+
+NOTE: This is Header style file. All Header related style included in this file.
+
+--------------------------------------*/
+
+/*================================================
+[  Table of contents  ]
+==================================================
+01. header area
+02. stick header
+03. mainmenu
+
+
+======================================
+[ End table content ]
+======================================*/
+
+/*************************
+header area
+*************************/
+
+.header-area {
+    height: 90px;
+    position: relative;
+    background-color: #111;
+}
+nav.collapse {
+    padding: 0;
+}
+.logo a {
+    padding: 5px 0;
+}
+
+/*************************
+stick header
+*************************/
+
+#sticker {
+    position: fixed;
+    width: 100%;
+    z-index: 999999;
+    left: auto;
+    margin: auto;
+}
+.header-area.stick {
+    top: 0;
+    height: 70px;
+    background-color: #2c3e50;
+}
+.stick .logo a {
+    padding: 2px 0px;
+}
+.stick .logo a img {
+  max-width: 80%;
+}
+.stick .mainmenu ul li a {
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
+.stick .mainmenu ul li:hover a::after,
+.stick .mainmenu ul li.active a::after {
+    bottom: 20px;
+}
+
+/*************************
+mainmenu
+*************************/
+
+.mainmenu ul {
+    text-align: right;
+}
+.mainmenu ul li {
+    display: inline-block;
+    position: relative;
+    text-align: left;
+}
+.mainmenu ul li a {
+    color: #fff;
+    display: block;
+    font-size: 13px;
+    padding: 32px 20px;
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.mainmenu ul li a:focus {
+    background-color: transparent;
+}
+.mainmenu ul li:hover a,
+.mainmenu ul li.active a {
+    background-color: transparent;
+    color: #21c2f8;
+}
+.mainmenu ul li a::after,
+.mainmenu ul li a::after {
+    bottom: 0;
+    content: "....";
+    font-size: 0px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease 0s;
+}
+.mainmenu ul li:hover a::after,
+.mainmenu ul li.active a::after {
+    bottom: 25px;
+    opacity: 1;
+    visibility: visible;
+    font-size: 30px;
+}

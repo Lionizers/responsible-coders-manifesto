@@ -8,7 +8,6 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     /[if lt IE 9]
-    %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     = tag(:meta, property: "og:title", content: "Manifiesto por el Desarrollo Responsable de Software")
     = tag(:meta, property: "og:description", content: "El Manifiesto por el Desarrollo Responsable de Software es una declaración de valores escritos por desarrolladores de software cansados del uso de sus conocimientos para dañar a otros.")
@@ -17,8 +16,15 @@
 
 
   %body
-
-    #content.container-fluid
-      = yield
-    = render 'layouts/footer'
+    /[if lt IE 8]
+      %p.browserupgrade
+        You are using an outdated browser. Please
+        %a{:href => "http://browsehappy.com/"} upgrade your browser
+        to improve your experience.
+    #preloader
+      #load  
+    .wrapper
+      #home
+        = yield
+      = render 'layouts/footer'
     = piwik_tracking_tag

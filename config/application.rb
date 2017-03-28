@@ -23,5 +23,7 @@ module CodersCode
     config.i18n.enforce_available_locales = false
 
     config.i18n.available_locales = [:en, :es, :ar, :de]
+
+    config.assets.paths << "#{Rails.root}/vendor/assets"
   end
 end

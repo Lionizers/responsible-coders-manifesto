@@ -1,0 +1,196 @@
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+    .mainmenu ul li a {
+        padding: 32px 14px;
+    }
+    .logo a {
+        padding: 12px 0;
+    }
+    .stick .logo a {
+        padding: 8px 0;
+    }
+}
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+
+.bg-1, .bg-2, .bg-3, .bg-4 {
+    background-repeat: repeat;
+}
+.sm-mb-30 {
+    margin-bottom: 30px;
+}
+.sm-mb-50 {
+    margin-bottom: 50px;
+}
+.logo a {
+    padding: 21px 0;
+}
+.stick .logo a {
+    padding: 16px 0;
+}
+.mainmenu ul li a {
+  font-size: 12px;
+  padding: 32px 8px;
+}
+.stick .mainmenu ul li a {
+    padding-bottom: 22px;
+    padding-top: 22px;
+}
+.experience, .skill {
+    width: 80%;
+    margin: auto;
+}
+.single-counter h4 {
+    font-size: 11px;
+}
+.single-portfolio {
+    width: 49.5%;
+}
+.contact-form {
+    width: 600px;
+}
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.container {
+    width:300px;
+}
+.bg-1, .bg-2, .bg-3, .bg-4 {
+    background-repeat: repeat;
+}
+.xs-mb-50 {
+    margin-bottom: 50px;
+}
+.xs-mb-30 {
+    margin-bottom: 30px;
+}
+.xs-mt-0 {
+    margin-top: 0px;
+}
+.header-area,
+.header-area.stick {
+    height: 50px;
+}
+.mobile-menu-area {
+    background-color: transparent;
+}
+.mean-container a.meanmenu-reveal span {
+    background-color: #fff;
+}
+.mean-container a.meanmenu-reveal {
+    color: #fff
+}
+.mean-container .mean-bar::after {
+    content: "";
+}
+.logo {
+    position: absolute;
+    z-index: 9999999;
+}
+.logo a,
+#sticker.stick .logo a {
+    width: 100px;
+    padding: 0;
+}
+.stick .logo a img {
+    max-width: 100%;
+}
+.mean-container .mean-nav ul li {
+    border-top: 1px solid #373737;
+}
+.mean-container .mean-nav ul li a {
+    background-color: #292929;
+    color: #fff;
+    padding: 7px 5%;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.mean-container .mean-nav ul li a:hover {
+    color: #454545;
+}
+.cd-intro h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.cd-intro h3 {
+    font-size: 26px;
+}
+.cd-intro h1 {
+    font-size: 18px;
+}
+.links .button-hover {
+    padding: 5px 20px;
+}
+button.sub-button {
+    margin-top: 10px;
+    position: relative;
+}
+.social-link ul li {
+    margin: 0 10px;
+    margin-bottom: 15px;
+}
+.single-portfolio {
+    margin: 0px 0px 10px 0px;
+    width: 100%;
+}
+.single-testimonial {
+    padding: 10px;
+}
+.test-img {
+    margin: auto;
+    float: none !important;
+}
+.test-info {
+    padding-left: 0px;
+    width: 100%;
+}
+.test-info .quote::before {
+    left: 0px;
+    top: -25px;
+}
+.test-info p {
+    font-size: 14px;
+}
+.contact-form {
+    width: 300px;
+}
+.close-form::after {
+    font-size: 15px;
+    height: 30px;
+    line-height: 27px;
+    right: 15px;
+    top: 15px;
+    width: 30px;
+}
+.address {
+    height: 330px;
+    width: 230px;
+}
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {
+    width:450px;
+}
+.social-link ul li {
+    margin: 0px 8px;
+}
+.single-counter {
+    float: left;
+    width: 45%;
+    margin: 2.5%;
+}
+.portfolio-menu ul li {
+    padding: 5px 15px;
+}
+.single-portfolio {
+    margin: 0.25%;
+    width: 49.5%;
+}
+.contact-form {
+    width: 400px;
+}
+}

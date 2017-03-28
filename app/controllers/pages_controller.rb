@@ -9,6 +9,5 @@ class PagesController < ApplicationController
     @coder = Coder.new
   end
 
-  def check
-  end
+  def check; end
 end

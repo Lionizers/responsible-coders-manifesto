@@ -1,0 +1,616 @@
+/*
+Template:  P-folio One Page Parallax Portfolio Template
+Author: RoyHridoy
+Version: 1.0
+Developed by: Hridoy Roy
+This file contains the styling for the actual Template.
+Please do not change anything here! write in a custom.css file if required!
+
+*/
+/*================================================
+[  Table of contents  ]
+==================================================
+01. preloader
+02. welcome area
+03. about me area
+04. Skill
+05. service area
+06. fun facts
+07. newsletter
+08. portfolio
+    08.1 portfolio menu
+    08.2 portfolio items
+09. testimonials
+10. blog
+11. Contact area
+    11.1 Google Map
+    11.2 Contact form
+
+
+======================================
+[ End table content ]
+======================================*/
+
+/*************************
+01. preloader
+*************************/
+
+body {
+    overflow: hidden;
+}
+#preloader {
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99999999; /* makes sure it stays on top */
+}
+#load {
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    background-image:url(/assets/Preloader.gif);
+    background-repeat:no-repeat;
+    background-position:center;
+    margin: auto;
+}
+
+/*************************
+02. welcome area
+*************************/
+
+.welcome-area {
+    height: 100vh;
+}
+a.button-hover,
+button.button-hover {
+    display: inline-block;
+    border: 1px solid;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 10px 25px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease 0s;
+}
+.links {
+    position: relative;
+    left: 5px;
+}
+.links a.button-hover {
+    margin: 0px 10px;
+}
+a.button-hover::after,
+a.button-hover::before,
+button.button-hover::after,
+button.button-hover::before {
+    background-color: #21c2f8;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 0%;
+    z-index: -1;
+}
+a.button-hover::before,
+button.button-hover::before {
+    left: auto;
+    right: 0;
+}
+a.button-hover:hover:after,
+a.button-hover:hover:before,
+button.button-hover:hover:after,
+button.button-hover:hover:before {
+    width: 50%;
+}
+a.button-hover:hover,
+button.button-hover:hover {
+    border-color: #21c2f8;
+}
+button.sub-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+button.button-hover.border-1-black {
+    border-color: #454545;
+}
+button.button-hover.border-1-black:hover {
+    border-color: #21c2f8;
+}
+.scroll-btn a {
+    bottom: 30px;
+    color: #fff;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    transition: all 0.3s ease 0s;
+}
+.scroll-btn a:hover {
+    bottom: 25px;
+}
+
+/*************************
+03. about me area
+*************************/
+
+#accordion {
+    border: 1px solid #ddd;
+}
+#accordion .accordion-panel.panel {
+    border-color: #ddd;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    margin-top: 0px;
+}
+#accordion .accordion-panel.panel:last-child {
+    border: 0 none;
+}
+.panel-title span {
+    display: block;
+    float: right;
+    height: 21px;
+    position: relative;
+    width: 21px;
+}
+.panel-heading a span::after {
+    background-color: #454545;
+    content: "";
+    height: 1px;
+    position: absolute;
+    top: 10px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+.panel-heading a.collapsed span::before {
+    height: 0px;
+    top: 10px;
+}
+.panel-heading a span:before {
+    background-color: #454545;
+    content: "";
+    height: 100%;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 1px;
+    transition: all 0.3s ease 0s;
+}
+.panel-heading {
+    position: relative;
+}
+.panel-title a {
+    color: #454545;
+}
+
+/*************************
+04. Skill
+*************************/
+
+.skill .progress {
+    background-color: #2c3e50;
+    border-radius: 3px;
+    box-shadow: none;
+    height: 12px;
+    overflow: visible;
+    position: relative;
+}
+.skill .progress .title {
+    left: 0;
+    position: absolute;
+    top: -27px;
+    z-index: 99;
+}
+.skill .progress .progress-bar {
+    border-radius: 3px;
+    box-shadow: none;
+    background-color: #21c2f8;
+    height: 8px;
+    margin-top: 2px;
+    margin-left: 2px;
+    position: relative;
+}
+.skill .progress .progress-bar::after {
+    background-color: #fff;
+    border-radius: 10px;
+    content: "";
+    height: 6px;
+    position: absolute;
+    right: 3px;
+    width: 6px;
+    top: 1px;
+}
+.skill .progress-bar span {
+    background-color: #2c3e50;
+    margin-top: -28px;
+    padding: 0 5px;
+    animation-delay: 3s;
+}
+.skill .progress-bar > span:before,
+.skill .progress-bar > span:after{
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.skill .progress-bar > span:before{
+    border-top-color: #2c3e50;
+    border-width: 5px;
+    left: 50%;
+    margin-left: -5px;
+}
+
+/*************************
+05. service area
+*************************/
+
+.YTPOverlay {
+    background-color: rgba(238,238,238,0.9);
+}
+.single-service {
+    transition: all 0.3s ease 0s;
+}
+.single-service:hover {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*************************
+06. fun facts
+*************************/
+
+.single-counter {
+    border: 1px solid #bdc3c7;
+    padding: 20px 10px;
+}
+
+/*************************
+07. newsletter
+*************************/
+
+.social-link ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+.social-link ul li a {
+    background-color: #454545;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    position: relative;
+    font-size: 18px;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    z-index: 1;
+}
+.social-link ul li a::after {
+    background-color: #21c2f8;
+    border-radius: 50%;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transition: all 0.3s ease 0s;
+    width: 0%;
+    z-index: -1;
+}
+.social-link ul li a:hover:after {
+    width: 100%;
+}
+
+/*************************
+08. portfolio
+*************************/
+
+/*************************
+08.1 portfolio menu
+*************************/
+
+.portfolio-menu ul li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 20px;
+    position: relative;
+    text-transform: uppercase;
+    transition: all 0.3s ease 0s;
+}
+.portfolio-menu ul li::after {
+    color: #ccc;
+    content: "/";
+    position: absolute;
+    right: 0;
+}
+.portfolio-menu ul li:last-child::after {
+    content: "";
+}
+.portfolio-menu ul li.mixitup-control-active,
+.portfolio-menu ul li:hover {
+    color: #21c2f8;
+}
+
+/*************************
+08.2 portfolio items
+*************************/
+
+.portfolio-items {
+    margin: 0px -.25%;
+}
+.single-portfolio {
+    float: left;
+    margin: 0.25%;
+    overflow: hidden;
+    position: relative;
+    width: 24.5%;
+    z-index: 1;
+}
+.portfolio-img a {
+    display: block;
+    position: relative;
+    z-index: 3;
+}
+.single-portfolio .caption {
+    background-color: #2c3e50;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.portfolio-img a.p-img img {
+    width: 100%;
+}
+.single-portfolio:hover .portfolio-img a.p-img {
+    transform: scale(0.6) translateY(-20%);
+    opacity: 0.6;
+}
+.caption-position {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+.options {
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    text-align: center;
+    top: 0;
+    transform: translateY(30%);
+    width: 100%;
+    z-index: 3;
+}
+.options ul li {
+    display: inline-block;
+}
+.options ul li a {
+    border: 1px solid #f3f5f7;
+    display: block;
+    font-size: 16px;
+    height: 40px;
+    line-height: 43px;
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+    width: 40px;
+    background-color: #454545;
+    pointer-events: auto;
+}
+.options ul li a:hover {
+    border: 1px solid #21C2F8;
+    transition-delay: 0s;
+}
+.options ul li a:focus {
+    color: #fff;
+}
+.single-portfolio:hover .options ul li a {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+.single-portfolio:hover .options ul li:last-child a {
+    transition-delay: 0.2s;
+}
+
+/*************************
+09. testimonials
+*************************/
+
+.test-img {
+    width: 30%;
+}
+.test-info {
+    padding-left: 45px;
+    width: 70%;
+}
+.quote::before {
+    content: "\f10d";
+    font-family: 'fontawesome';
+    font-size: 26px;
+    left: 18px;
+    opacity: 0.6;
+    position: absolute;
+    top: 50px;
+}
+.test-info .quote::before {
+    font-size: 26px;
+    left: 15px;
+    top: -10px;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background-color: #aaa;
+    border-radius: 0px;
+    transition: all 0.3s ease 0s;
+}
+.owl-theme .owl-dots .owl-dot.active span {
+    background-color: #21c2f8;
+}
+
+/*************************
+10. blog
+*************************/
+
+.main-overlay {
+    height: 100%;
+    background-color: #21c2f8;
+    left: 0;
+    opacity: 0.6;
+    pointer-events: none;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.single-blog:hover .main-overlay {
+    transform: scaleX(1);
+}
+.single-blog .blog-info {
+    border: 1px solid #eee;
+    padding: 20px 10px 10px;
+}
+.blog-link {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleY(0.8);
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.single-blog:hover .blog-link {
+    opacity: 1;
+    transform: scaleY(1);
+}
+.blog-link .icon a {
+    display: inline-block;
+    height: 40px;
+    line-height: 43px;
+    margin: 0 3px;
+    width: 40px;
+}
+
+/*************************
+11. Contact area
+*************************/
+
+.contact-me {
+    position: relative;
+}
+
+/*************************
+11.1 Google Map
+*************************/
+
+#google-Map {
+    height: calc(100vh - 70px);
+    width: 100%;
+}
+.address {
+    background-color: #fff;
+    bottom: 0;
+    height: 275px;
+    left: 20px;
+    margin: auto;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    width: 400px;
+}
+.street-address ul li i {
+    background-color: #21c2f8;
+    border-radius: 50%;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    margin-right: 10px;
+}
+
+/*************************
+11.2 Contact form
+*************************/
+
+
+.contact-overlay {
+    background: rgba(0, 0, 0, 0.85) none repeat scroll 0 0;
+    bottom: 0;
+    height: auto;
+    left: 0;
+    display: none;
+    margin: auto;
+    opacity: 1;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2147483647;
+}
+.contact-form {
+    background-color: #fff;
+    width: 720px;
+    margin: 50px auto 0px;
+    padding: 50px 30px;
+    position: relative;
+}
+.close-form::after {
+    content: "\f00d";
+    border: 1px solid #454545;
+    border-radius: 50%;
+    cursor: pointer;
+    font-family: "fontawesome";
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+.contact-form-btn button {
+    bottom: -3px;
+    position: fixed;
+    right: 20px;
+    z-index: 999;
+}
+#contact-form .input-box input,
+#contact-form .input-textarea textarea {
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+#contact-form .input-textarea textarea {
+    height: 150px;
+    width: 100%;
+}
+.form-messege {
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 5px 0;
+}
+.form-messege.success {
+    background-color: #7caa2d;
+}
+.form-messege.error {
+    background-color: #FF420E;
+}

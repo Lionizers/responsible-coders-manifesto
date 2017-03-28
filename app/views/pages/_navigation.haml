@@ -1,0 +1,22 @@
+%header#sticker.header-area.bg-opacity-white-10.transition-5
+  .container.pos-relative.hidden-xs
+    .row
+      .col-sm-12
+        .mainmenu
+          %nav.collapse.navbar-collapse
+            %ul.nav
+              %li= link_to(I18n.t('languages.english'), root_path(:locale => :en))
+              %li= link_to(I18n.t('languages.spanish'), root_path(:locale => :es))
+              %li= link_to(I18n.t('languages.arabic'), root_path(:locale => :ar))
+              %li= link_to(I18n.t('languages.deutsch'), root_path(:locale => :de))
+  #sticker-mobile.mobile-menu-area.hidden-lg.hidden-md.hidden-sm
+    .container
+      .row
+        .col-xs-12
+          .mobile-menu
+            %nav
+              %ul
+                %li= link_to(I18n.t('languages.english'), root_path(:locale => :en))
+                %li= link_to(I18n.t('languages.spanish'), root_path(:locale => :es))
+                %li= link_to(I18n.t('languages.arabic'), root_path(:locale => :ar))
+                %li= link_to(I18n.t('languages.deutsch'), root_path(:locale => :de))

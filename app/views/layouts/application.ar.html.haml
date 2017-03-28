@@ -9,17 +9,23 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     /[if lt IE 9]
-    %script{ src: "http://html5shim.googlecode.com/svn/trunk/html5.js"}
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    = tag(:meta, property: "og:title", content: "ميثاق تطوير البرمجيات بشكل مسؤول")
+    = tag(:meta, property: "og:title", content: " ميثاق تطوير البرمجيات بشكل مسؤول")
     = tag(:meta, property: "og:description", content: "ميثاق البرمجيات المسؤولة هو نصريح عن مجموعة من القيم تم كتابتها بواسطة مبرمجين تعبوا من الاشخاص الذين يستخدمون علم البرمجة لايذاء الناس ")
     = tag("meta", property: "twitter:creator", content: "@NilsLoewe")
     <script src='https://www.google.com/recaptcha/api.js'></script>
 
 
   %body
-
-    #content.container-fluid
-      = yield
-    = render 'layouts/footer'
+    /[if lt IE 8]
+      %p.browserupgrade
+        You are using an outdated browser. Please
+        %a{:href => "http://browsehappy.com/"} upgrade your browser
+        to improve your experience.
+    #preloader
+      #load  
+    .wrapper
+      #home
+        = yield
+      = render 'layouts/footer'
     = piwik_tracking_tag

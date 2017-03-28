@@ -13,20 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery.scrollTo
+//= require ajax-mail
+//= require change-text
+//= require jquery.counterup.min
+//= require jquery.easing
+//= require jquery.meanmenu
+//= require jquery.scrollUp.min
+//= require jquery.stellar
+//= require mixitup.min
+//= require modernizr-2.8.3.min
+//= require owl.carousel.min
+//= require plugins
+//= require venobox.min
+//= require waypoint.min
+//= require wow.min
 //= require bootstrap.min
-//= require_tree .
-
-$(document).ready(function(){
-    $("#sign_link").click(function(e){
-      e.preventDefault();
-      $('html,body').scrollTo(document.getElementById('form'), 800);
-    });
-  });
-
-$(document).ready(function(){
-    $("#view_link").click(function(e){
-      e.preventDefault();
-      $('html,body').scrollTo(document.getElementById('signers'), 800);
-    });
-  });
+//= require main
+//= require_self

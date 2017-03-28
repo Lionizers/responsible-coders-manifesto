@@ -1,43 +1,28 @@
-%section.section#manifesto
+= render 'navigation'
 
-  = render 'github'
-  = render 'manifesto'
+= render 'header'
 
-  .manifesto-link
-    .row
-      .col-sm-offset-4.col-sm-4
-        =link_to I18n.t('coder.create'), '#form', :id => "sign_link", :class => "btn btn-success btn-sm btn-block"
+= render 'manifesto'
+
+.manifesto-link
+  .row
+    .col-sm-offset-4.col-sm-4
+      =link_to I18n.t('coder.create'), '#form', :id => "sign_link", :class => "smooth button-hover color-black color-hover-white"
 
 %section.section#form
-
-  .manifesto-short
+  .container
     .row
-      .col-sm-offset-2.col-sm-10
+      .col-md-8.col-md-offset-2
         %h1= I18n.t('form.headline')
-
-    .row
-      .col-sm-offset-2.col-sm-8
         %p= I18n.t('manifesto.content.sub1')
         %p= I18n.t('manifesto.content.sub2')
         %p= I18n.t('manifesto.content.sub3')
         %p= I18n.t('manifesto.content.sub4')
         %p= I18n.t('manifesto.content.sub5')
         %p= I18n.t('manifesto.footer')
-
-  .manifesto-form
-    .row
-      .col-sm-offset-2.col-sm-8
         = render 'coders/form'
-
-  .manifesto-privacy
-    .row
-      .col-sm-offset-2.col-sm-8
         %b= I18n.t('form.privacy.header')
         %p= I18n.t('form.privacy.text')
-
-  .manifesto-link
-    .row
-      .col-sm-offset-4.col-sm-4
         =link_to I18n.t('manifesto.signers'), '#signers', :id => "view_link"
 
 %section.section#signers

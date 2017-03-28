@@ -1,7 +1,19 @@
 /*
+ *= require animate
+ *= require change-text
+ *= require custom
+ *= require font-awesome.min
+ *= require meanmenu.min
+ *= require normalize
+ *= require header
+ *= require theme-base
+ *= require owl.carousel.min
+ *= require owl.theme.default.min
+ *= require venobox
  *= require bootstrap.min
  *= require jquery-ui
  *= require responsive
+ *= require style
  *= require_self
 */
 
@@ -136,4 +148,29 @@
 
 .g-recaptcha {
    margin: 15px auto !important;
+}
+
+@media (min-width: 769px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 600px) {
+
+  #github {
+    display: none;
+    visibility:hidden;
+  }
+
+  #footer{
+    font-size: 4pt;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+
 }
