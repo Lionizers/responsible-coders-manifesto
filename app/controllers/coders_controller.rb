@@ -23,7 +23,7 @@ class CodersController < ApplicationController
     return unless verify_recaptcha(model: @coder, message: 'Please enter the correct captcha!')
 
     @coder.save
-    SignupMailer.verify_email(@coder).deliver
+    SignupMailer.verify_email(@coder).deliver_now
   end
 
   def create_coder_successful(_)
@@ -40,7 +40,7 @@ class CodersController < ApplicationController
 
     if @coder.present? && @coder.verified? == false
       @coder.verified = true
-      SignupMailer.share_email(@coder).deliver
+      SignupMailer.share_email(@coder).deliver_now
       @coder.email = 'obfuscated'
       @coder.save
       flash[:signed_up] = true

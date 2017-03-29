@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-gem 'rails', '4.1.9'
+gem 'rails', '~> 4.2'
 
 gem 'dotenv-rails'
 gem 'pg'
@@ -26,6 +26,7 @@ gem 'bootstrap_form'
 gem 'devise'
 gem 'rack-timeout'
 
+gem 'brakeman', require: false
 gem 'capistrano'
 gem 'capistrano-bundler'
 gem 'capistrano-passenger'
