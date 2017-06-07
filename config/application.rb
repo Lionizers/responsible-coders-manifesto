@@ -23,7 +23,7 @@ module CodersCode
     # config.i18n.default_locale = :de
     config.i18n.enforce_available_locales = false
 
-    config.i18n.available_locales = %i(en es ar de)
+    config.i18n.available_locales = %i[en es ar de]
 
     config.assets.paths << Rails.root.join('vendor', 'assets')
   end

@@ -7,10 +7,10 @@ desc 'run rubocop'
 task(:rubocop) do
   require 'rubocop'
   cli = RuboCop::CLI.new
-  cli.run(%w(--rails))
+  cli.run(%w[--rails])
 end
 
-task default: %i(rubocop test)
+task default: %i[rubocop test]
 
 require File.expand_path('../config/application', __FILE__)
 
