@@ -28,5 +28,4 @@
 //= require waypoint.min
 //= require wow.min
 //= require bootstrap.min
-//= require main
 //= require_self

@@ -12,8 +12,8 @@
  *= require venobox
  *= require bootstrap.min
  *= require jquery-ui
- *= require responsive
  *= require style
+ *= require responsive
  *= require_self
 */
 
